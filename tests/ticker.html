@@ -1,0 +1,31 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title></title>
+	<link rel="stylesheet" type="text/css" media="screen" href="../Roar.css" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools-yui-compressed.js"></script>
+	<script type="text/javascript" src="../Roar.js"></script>
+</head>
+<body>
+<script type="text/javascript">
+// This time we use load, to load the whole page, a bit more time
+window.addEvent('load', function() {
+	var roar = new SimpleRoar({
+		position: 'lowerLeft',
+		duration: 5000 // 5 seconds until message fades out
+	});
+ 
+	roar.alert('Britney Spears meets Frankenstein', 'The Beast and the Beauty, who is who!');
+ 
+	roar.chain(function() {
+		roar.alert('News gone crazy', 'Frankenstein is lost!');
+	}).chain(function() {
+		roar.alert('Frankenstein dead!', 'Who did it, we know it!');
+	}).chain(function() {
+		roar.alert('We fired our editor!', 'He only wrote stupid lorem ipsum dummies, hopefully we get better texts for the next showcase!');
+	});
+});
+</script>
+</body>
+</html>
